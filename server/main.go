@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"ess/config"
+	"ess/global"
+	"ess/route"
+)
 
 func main() {
-	fmt.Println("go go go")
+	if global.DB != nil {
+		config.CreateTables(global.DB)
+	}
+	route.InitRoute()
 }
