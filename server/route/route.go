@@ -2,8 +2,9 @@ package route
 
 import (
 	"ess/global"
-	"github.com/gin-gonic/gin"
 	"os"
+
+	"github.com/gin-gonic/gin"
 )
 
 func InitRoute() {

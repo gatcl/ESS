@@ -9,4 +9,6 @@ var (
 	DB  *gorm.DB
 	RC  *redis.Client
 	CFG Config
+
+	DateFormat = "2006-01-02 15:04:05"
 )

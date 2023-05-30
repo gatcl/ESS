@@ -4,11 +4,12 @@ import (
 	"context"
 	"ess/global"
 	"fmt"
+	"os"
+
 	"github.com/redis/go-redis/v9"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
-	"os"
 )
 
 func initRedis() {

@@ -3,8 +3,9 @@ package config
 import (
 	"ess/global"
 	"fmt"
-	"gopkg.in/ini.v1"
 	"time"
+
+	"gopkg.in/ini.v1"
 )
 
 func init() {
