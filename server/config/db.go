@@ -3,6 +3,7 @@ package config
 import (
 	"context"
 	"ess/global"
+	"ess/model"
 	"fmt"
 	"os"
 
@@ -47,7 +48,14 @@ func initMysql() {
 }
 
 func CreateTables(db *gorm.DB) {
-	err := db.AutoMigrate()
+	err := db.AutoMigrate(
+		&model.User{},
+		&model.Word{},
+		&model.Character{},
+		&model.Meaning{},
+		&model.Phrase{},
+		&model.Sentence{},
+	)
 	if err != nil {
 		os.Exit(0)
 
